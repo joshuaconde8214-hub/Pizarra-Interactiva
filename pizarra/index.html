@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizarra Digital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Herramientas</h2>
+      <label>Herramienta:
+        <select id="tool">
+          <option value="pen">Lápiz</option>
+          <option value="eraser">Borrador</option>
+          <option value="rect">Rectángulo</option>
+          <option value="circle">Círculo</option>
+        </select>
+      </label>
+      <label>Color trazo:
+        <input type="color" id="color" value="#111827">
+      </label>
+      <label>Color relleno:
+        <input type="color" id="fillColor" value="#ffffff">
+      </label>
+      <label>Grosor:
+        <input type="range" id="lineWidth" min="1" max="40" value="3">
+      </label>
+      <div class="buttons">
+        <button id="undo">↩ Deshacer</button>
+        <button id="redo">↪ Rehacer</button>
+      </div>
+      <div class="buttons">
+        <button id="clear">🗑 Borrar todo</button>
+        <button id="save">💾 Guardar</button>
+      </div>
+    </aside>
+    <main class="main">
+      <h1>Pizarra Digital</h1>
+      <div class="canvas-container">
+        <canvas id="canvas"></canvas>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
